@@ -1,13 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { WeatherOverviewComponent } from './containers/weather-overview/weather-overview.component';
-import { CityWeatherInfoComponent } from './components/city-weather-info/city-weather-info.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {WeatherOverviewComponent} from './containers/weather-overview/weather-overview.component';
+import {CityWeatherInfoComponent} from './components/city-weather-info/city-weather-info.component';
 import {RouterModule} from '@angular/router';
-import {StoreModule} from '@ngrx/store';
 import {SharedModule} from '../shared/shared.module';
-import { WeatherForecastOverviewComponent } from './containers/weather-forecast-overview/weather-forecast-overview.component';
-import { HourlyForecastComponent } from './components/hourly-forecast/hourly-forecast.component';
-import { CurrentWeatherInfoBoxComponent } from './components/current-weather-info-box/current-weather-info-box.component';
+import {WeatherForecastOverviewComponent} from './containers/weather-forecast-overview/weather-forecast-overview.component';
+import {HourlyForecastComponent} from './components/hourly-forecast/hourly-forecast.component';
+import {CurrentWeatherInfoBoxComponent} from './components/current-weather-info-box/current-weather-info-box.component';
 
 @NgModule({
     declarations: [
@@ -30,8 +29,7 @@ import { CurrentWeatherInfoBoxComponent } from './components/current-weather-inf
                 component: WeatherForecastOverviewComponent
             },
         ]),
-        // StoreModule.forFeature(MODULE_KEY, reducers),
-        // EffectsModule.forFeature(effects),
     ],
 })
-export class WeatherModule {}
+export class WeatherModule {
+}
