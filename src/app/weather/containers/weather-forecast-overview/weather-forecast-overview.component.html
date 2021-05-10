@@ -1,0 +1,9 @@
+<div class="forecast">
+    <wa-current-weather-info-box
+        [currentWeather]="currentWeatherInfo | async"
+    ></wa-current-weather-info-box>
+    <wa-hourly-forecast
+        [hourlyForecast]="cityForecast | async"
+    ></wa-hourly-forecast>
+    <button type="button" [routerLink]="['/']">Back</button>
+</div>

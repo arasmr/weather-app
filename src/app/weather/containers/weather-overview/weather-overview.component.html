@@ -1,0 +1,7 @@
+<div class="weather-overview">
+    <wa-city-weather-info
+        class="weather-overview__container"
+        *ngFor="let city of citiesWeatherInfo"
+        [cityWeatherInfo]="city"
+    ></wa-city-weather-info>
+</div>

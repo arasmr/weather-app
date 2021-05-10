@@ -1,0 +1,11 @@
+<div *ngIf="hourlyForecast" class="hourly-forecast">
+    <div *ngFor="let hourInfo of hourlyForecast.list" class="hourly-forecast__list">
+        <div>
+            <p>{{hourInfo.dt * 1000 | date:'h:mm a'}}</p>
+            <p>{{hourInfo.dt * 1000 | date:'d MMM'}}</p>
+        </div>
+        <img src="{{hourInfo.weather[0].icon}}" alt="weather icon"/>
+        <p>{{hourInfo.weather[0].main}}</p>
+        <p>{{hourInfo.main.temp | celcius}}</p>
+    </div>
+</div>

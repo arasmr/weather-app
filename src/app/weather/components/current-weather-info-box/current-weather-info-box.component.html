@@ -1,0 +1,16 @@
+<div *ngIf="currentWeather" class="current-weather">
+    <div class="current-weather__info">
+        <div class="current-weather__header">
+            <div class="current-weather__current">
+                <img src="{{currentWeather.weather[0].icon}}" alt="weather icon"/>
+                <p>{{currentWeather.main.temp | celcius}}</p>
+            </div>
+            <div class="current-weather__city-info">
+                <h3>{{currentWeather.name}}</h3>
+                <p>{{currentWeather.dt * 1000 | date: 'EEEE'}}</p>
+                <p>{{currentWeather.weather[0].main}}</p>
+            </div>
+        </div>
+        <div class="current-weather__bg" [ngStyle]="{backgroundImage: 'url(' + currentWeather.imagePath + ')'}"></div>
+    </div>
+</div>

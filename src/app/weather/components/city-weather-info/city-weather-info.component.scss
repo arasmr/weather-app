@@ -1,0 +1,81 @@
+.weather {
+    padding: 0 10px;
+
+    &__title {
+        background-color: beige;
+        padding: 5% 0;
+    }
+
+    &__card {
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
+        text-align: center;
+        background-color: white;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & h2 {
+            margin: 0;
+        }
+    }
+
+    &__image {
+        height: 150px;
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 50px;
+    }
+
+    &__details {
+        width: 70%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2%;
+    }
+
+    &__degree {
+        width: 30%;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__wind {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__date {
+        width: 30%;
+        height: 100%;
+        background-color: #50b8e7;
+        padding: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .weather {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

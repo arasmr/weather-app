@@ -1,0 +1,20 @@
+<div *ngIf="cityWeatherInfo" class="weather">
+    <div class="weather__card" (click)="navigateToForecastPage(cityWeatherInfo.name)">
+        <h2 class="weather__title">{{cityWeatherInfo.name}}</h2>
+        <div class="weather__image" [ngStyle]="{backgroundImage: 'url(' + cityWeatherInfo.imagePath + ')'}"></div>
+        <div class="weather__info">
+            <div class="weather__details">
+                <div class="weather__degree">
+                    {{cityWeatherInfo.main.temp | round}}°
+                </div>
+                <div class="weather__wind">
+                    <p>{{cityWeatherInfo.weather[0].main.toUpperCase()}}</p>
+                    <p>Wind:{{cityWeatherInfo.wind.speed | round}} km</p>
+                </div>
+            </div>
+            <div class="weather__date">
+                <img src="{{cityWeatherInfo.weather[0].icon}}" alt="weather icon"/>
+            </div>
+        </div>
+    </div>
+</div>

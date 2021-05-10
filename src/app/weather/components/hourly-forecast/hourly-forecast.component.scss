@@ -1,0 +1,23 @@
+.hourly-forecast {
+    width: 500px;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #6886c5;
+        color: white;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hourly-forecast {
+        width: 350px;
+    }
+}
+

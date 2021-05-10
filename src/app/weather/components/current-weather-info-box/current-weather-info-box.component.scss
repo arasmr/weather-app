@@ -1,0 +1,52 @@
+.current-weather {
+    height: 250px;
+    width: 500px;
+    margin-bottom: 1rem;
+
+    h3 {
+        font-size: 2rem;
+        margin: 0.625rem 0;
+    }
+
+    &__header {
+        width: 100%;
+        height: 100px;
+        background-color: #9fd8df;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__info {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+
+    &__current {
+        flex-grow: 1;
+        color: #ff7171;
+        font-size: 2rem;
+    }
+
+    &__city-info {
+    }
+
+    &__bg {
+        height: 150px;
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .current-weather {
+        width: 350px;
+    }
+}
